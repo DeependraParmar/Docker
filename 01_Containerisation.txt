@@ -27,3 +27,10 @@ Docker has 3 major parts:
     - A command line interface (CLI) client (the docker command).
 
 3. Docker Registry: A place where you can store and share your images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
+
+
+## Docker Image 
+Docker image is a template from which consistent containers can be created. If docker was a traditional virtual machine, the could be like an ISO file used to install your VM. It basically has the file-system, codebase, network configuation, etc. 
+
+## Docker Container
+A container is a runtime instance of a docker image. It is a lightweight, standalone, executable, independent, abstract, isolated package of software that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
