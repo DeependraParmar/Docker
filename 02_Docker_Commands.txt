@@ -1,0 +1,44 @@
+1. To pull an run an image from the docker hub, we can use the following command:
+
+# docker run <image-id>
+Eg. docker run hello-world
+
+______________________________________________________________________________________________________________
+
+2. To list all the images that are available in the local system, we can use the following command:
+
+# docker images
+
+______________________________________________________________________________________________________________
+
+3. To list all the containers that are available in the local system, we can use the following command:
+
+# docker ps -a
+
+______________________________________________________________________________________________________________
+
+4. To list all the containers that are currently running, we can use the following command:
+
+# docker ps
+
+______________________________________________________________________________________________________________
+
+5. To create an image from a codebase or application, we can use the following command:
+
+# docker build .
+
+______________________________________________________________________________________________________________
+
+6. To pull an image from dockerhub or any other registry, we can use the following command:
+
+# docker pull <image-name>
+Eg. docker pull mongo
+
+______________________________________________________________________________________________________________
+
+7. To create a container from an image, we can use the following command:
+
+# docker run <image-id>
+Eg. docker run mongo
+
+______________________________________________________________________________________________________________
