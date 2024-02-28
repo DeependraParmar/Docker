@@ -1,0 +1,29 @@
+Why containerisation?
+
+1. Everyone has different Operating Systems.
+2. Steps to run a project can based on OS.
+3. Extremely harder to keep trach of dependencies as project grows.
+4. What is there was a way to describe your projects configuation(database, dependencies, their versions, etc) in a single file(docker file)?
+5. What if that could be run in an isolated environment(env under abstract layer)?
+6. Makes local setup of OS projects a breeze
+7. Makes installing auxiliary services like databases, caches, etc a breeze
+8. Just kill the container and get rid of all the dependencies when you are done.
+
+
+## Containerisation
+Containerization involves building self-sufficient software packages that perform consistently, regardless of the machines they run on. Its basically taking the snapshot of a machine, the filesystem and letting you use and deploy it as a construct.
+
+## Docker
+Docker is a platform for developers and sysadmins to develop, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. Docker lets you get your code tested and deployed into production as fast as possible.
+- Makes it easier to create, deploy, and run applications by using containers.
+- Allows for container orchestration which makes deployment a breeze.
+
+
+Docker has 3 major parts:
+1. CLI: Command Line Interface which helps you to write  commands to interact with the docker daemon.
+2. Docker Engine: A client-server application with these major components:
+    - A server which is a type of long-running program called a daemon process (the dockerd command).
+    - A REST API which specifies interfaces that programs can use to talk to the daemon and instruct it what to do.
+    - A command line interface (CLI) client (the docker command).
+
+3. Docker Registry: A place where you can store and share your images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
