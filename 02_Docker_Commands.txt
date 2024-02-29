@@ -42,3 +42,24 @@ ________________________________________________________________________________
 Eg. docker run mongo
 
 ______________________________________________________________________________________________________________
+
+8. To create an image from the codebase, we can use the following command:
+
+# docker build . -t <image-name> 
+Eg. docker build . -t my-image
+
+______________________________________________________________________________________________________________
+
+9. To route the traffic from the host machine to the container(port mapping), we can use the following command:
+
+# docker run -p <host-port>:<container-port> <image-id>
+Eg. docker run -p 3000:3000 test-node-app
+
+______________________________________________________________________________________________________________
+
+10. To route the traffic from the host machine to the container(port mapping) and run the container in the background, we can use the following command:
+
+# docker run -d -p <host-port>:<container-port> <image-id>
+Eg. docker run -d -p 3000:3000 test-node-app
+
+______________________________________________________________________________________________________________
