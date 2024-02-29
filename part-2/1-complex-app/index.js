@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
     await entry.save();
     res.send('Entry added!');
   } catch (err) {
-    res.status(500).send('Error occurred');
+    res.status(500).send('Error occurred'); 
   }
 });
 

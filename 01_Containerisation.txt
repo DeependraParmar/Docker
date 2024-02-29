@@ -47,3 +47,52 @@ A container is a runtime instance of a docker image. It is a lightweight, standa
 
 ______________________________________________________________________________________________________________
 
+## Caching and layers in Docker
+
+Every command in the docker file( FROM, WORKDIR, COPY, RUN, etc) create a new layer in the docker image. When you run a container, the layers are stacked on top of each other to create the container.
+
+FROM: Creates a new layer which basically pulls the image from the dockerhub specifying the base image.
+WORKDIR: Creates a new layer which sets the working directory for the image.
+COPY: Creates a new layer which copies the files from the host to the image.
+RUN: Creates a new layer which runs the command in the image.
+
+When you run a container, the layers are stacked on top of each other to create the container. If a layer is changed, only that layer and the layers above it are rebuilt. This is called caching. The process of preserving the state of a particular layer which has not got any new changes in order to boost the build process is called as caching. 
+
+For eg: If the layer 2 changed, layer 3 and the layer 4 are going to be rebuilt from scratch. Layer 1 being intact is going to be cached.
+
+______________________________________________________________________________________________________________
+
+## Why Layers ?
+
+> Caching
+> Re-using layers
+> Faster build times.
+
+______________________________________________________________________________________________________________
+
+## Volumes and Networks in Docker 
+
+1. Docker is also used to run the databases, redis, auxiliary services locally iin order to prevent the local machine from getting cluttered and getting polluted from the unnecessary dependencies.
+2. We can bring up and down the dbs, redia, kafka and clean out our local machine.
+
+Problems: 
+1. We want local databases to retain information across restarts especially for databases : SOLVED WITH VOLUMES
+2. We want to allow one docker container to talk to another docker container (eg: backend to database) : SOLVED WITH NETWORKS
+
+______________________________________________________________________________________________________________
+
+Volumes: Volumes are used for persisting data across starts specially seful for things like databases.
+- Volumes are a way to persist data in the host machine.
+- Volumes are a way to share data between the host and the container.
+- Volumes are a way to share data between containers.
+
+______________________________________________________________________________________________________________
+
+Networks: Networks are used to allow one container to talk to another container.
+- If you containerize the backend and the database, you need to allow the backend to talk to the database. If you ping localhost in the backend and the db, it will hit the localhost of the container and not the host which means they have the scope only inside the container.
+- In order to establish communication between the backend and the databse, we need to create a network between the backend and the database service.
+
+- Containers have their own network.  
+
+______________________________________________________________________________________________________________
+

@@ -63,3 +63,55 @@ ________________________________________________________________________________
 Eg. docker run -d -p 3000:3000 test-node-app
 
 ______________________________________________________________________________________________________________
+
+11. In order to create a volume and run the container in the same volume, we can use the following command:
+
+# docker volume create volume_database
+# docker run -v volume_database:/data/db -p 27017:27017 mongo
+
+______________________________________________________________________________________________________________
+
+12. To list all the volumes that are available in the local system, we can use the following command:
+
+# docker volume ls
+
+______________________________________________________________________________________________________________
+
+13. To remove a container, we can use the following command:
+
+# docker rm <container-id>
+
+______________________________________________________________________________________________________________
+
+14. To kill a container, we can use the following command:
+
+# docker kill <container-id>
+
+______________________________________________________________________________________________________________
+
+15. To ssh into a container, we can use the following command:
+
+# docker exec -it <container-id> /bin/bash
+
+______________________________________________________________________________________________________________
+
+16. To remove the volume, we can use the following command: 
+
+# docker volume rm volume_name
+
+______________________________________________________________________________________________________________
+
+17. To create a network, we can use the following command: 
+
+# docker network create test-network
+
+______________________________________________________________________________________________________________
+
+18. To run a network with port mapping, giving container a name and attaching network to it, we can use the following command: 
+
+# docker run -p 3000:3000 --network test-network --name backend test-node-app
+# docker run -p 27017:27017 --network test-network --name database mongo
+
+______________________________________________________________________________________________________________
+
+19. 
