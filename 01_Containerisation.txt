@@ -96,4 +96,4 @@ Networks: Networks are used to allow one container to talk to another container.
 
 ______________________________________________________________________________________________________________
 
-## Docker Compose
+## Environment Variables in Docker Containers
