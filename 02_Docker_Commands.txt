@@ -126,3 +126,14 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________
 
+21. To build the dev image and run the container, we can use the following command:
+
+# docker build --target development -t dev-image .
+
+______________________________________________________________________________________________________________
+
+22. To build the prod image and run the container, we can use the following command:
+
+# docker build --target production -t prod-image .
+
+______________________________________________________________________________________________________________

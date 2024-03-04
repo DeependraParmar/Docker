@@ -97,3 +97,11 @@ Networks: Networks are used to allow one container to talk to another container.
 ______________________________________________________________________________________________________________
 
 ## Environment Variables in Docker Containers
+
+It helps you prevent the environment variables from being hardcoded in the codebase. It helps you to keep the sensitive information like the database password, the API keys, etc in the environment variables.
+
+______________________________________________________________________________________________________________
+
+## Multi-stage builds in Docker
+
+What if you want to allow dev backend to hot reload but the prod env to not ?
