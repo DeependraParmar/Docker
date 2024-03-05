@@ -105,3 +105,12 @@ ________________________________________________________________________________
 ## Multi-stage builds in Docker
 
 What if you want to allow dev backend to hot reload but the prod env to not ?
+
+Multi-stage builds are a way to use multiple Dockerfiles in a single Dockerfile. It allows you to use different base images for different stages of the build. It allows you to use different base images for different stages of the build.
+
+For eg: You can use node:alpine for the dev stage and node:slim for the prod stage.
+
+______________________________________________________________________________________________________________
+
+## Docker Compose
+

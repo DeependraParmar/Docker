@@ -137,3 +137,9 @@ ________________________________________________________________________________
 # docker build --target production -t prod-image .
 
 ______________________________________________________________________________________________________________
+
+23. In order to make your local working directory and the image's working directory the same, we can use the following command: It helps in order to propogate the changes locally to the container.
+
+# docker run -v $(pwd):/app <image-id>
+
+______________________________________________________________________________________________________________
