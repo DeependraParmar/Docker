@@ -114,3 +114,14 @@ ________________________________________________________________________________
 
 ## Docker Compose
 
+Problem: A project has a lot of auxilliary services like databases, caches, etc. It becomes a pain to bring up and down all the services manually using multiple docker commands and terminals. In order to get started with the single docker command, we can use docker-compose.
+
+Bad solution: Run multiple docker run commands or use detached (-d) mode.
+
+Good solution: Use docker-compose to bring up and down all the services with a single command.
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+
+All services are already connected via a network and can be referenced by their name. 
+
+______________________________________________________________________________________________________________
